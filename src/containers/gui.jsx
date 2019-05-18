@@ -36,6 +36,11 @@ class GUI extends React.Component {
             const extensionURL = window.location.search.match(/url=(https?:\/\/[\w.\/-]+)/)[1];
             this.props.vm.extensionManager.loadExtensionURL(extensionURL);
         }
+                if (window.location.search.indexOf('url2=') !== -1) {
+            const extensionURL = window.location.search.match(/url=(https?:\/\/[\w.\/-]+)/)[1];
+            this.props.vm.extensionManager.loadExtensionURL(extensionURL);
+        }
+
     }
     componentDidMount () {
         if (this.props.vm.initialized) return;
